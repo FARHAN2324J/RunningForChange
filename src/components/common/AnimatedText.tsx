@@ -9,11 +9,13 @@ gsap.registerPlugin(SplitText, ScrollTrigger);
 interface AnimatedTextProps {
   children: React.ReactNode;
   animate?: "chars" | "lines";
+  scrub?: boolean;
 }
 
 export function AnimatedText({
   children,
   animate = "chars",
+  scrub = false,
 }: AnimatedTextProps) {
   const textRef = useRef<HTMLSpanElement>(null);
 
@@ -33,7 +35,9 @@ export function AnimatedText({
           scrollTrigger: {
             trigger: textRef.current,
             start: "top 80%",
-            once: true,
+            end: scrub ? "bottom 60%" : undefined,
+            scrub: scrub,
+            once: !scrub,
           },
         });
       }
@@ -47,7 +51,9 @@ export function AnimatedText({
           scrollTrigger: {
             trigger: textRef.current,
             start: "top 80%",
-            once: true,
+            end: scrub ? "bottom 60%" : undefined,
+            scrub: scrub,
+            once: !scrub,
           },
         });
       }
@@ -58,13 +64,17 @@ export function AnimatedText({
         });
       };
     },
-    { scope: textRef, dependencies: [animate] }
+    { scope: textRef, dependencies: [animate, scrub] }
   );
 
   return (
     <span className="relative">
       <span className="sr-only">{children}</span>
-      <span ref={textRef} aria-hidden="true" className="overflow-hidden span-animate">
+      <span
+        ref={textRef}
+        aria-hidden="true"
+        className="overflow-hidden span-animate"
+      >
         {children}
       </span>
     </span>

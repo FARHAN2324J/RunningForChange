@@ -15,7 +15,7 @@ const Statement = () => {
     >
       <article className="relative bg-[var(--Bg5)] px-5 py-8 flex flex-col items-center justify-center gap-3 w-full">
         <h1 className="Heading1 text-[var(--On-accent1)] text-center leading-none tracking-[-0.04em]">
-          <AnimatedText>
+          <AnimatedText scrub>
             Stride
             <br className="block md:hidden" />
             Together,
@@ -26,7 +26,7 @@ const Statement = () => {
           </AnimatedText>
         </h1>
         <p className="Paragraph1 text-[var(--On-accent1)] text-center font-sans whitespace-pre-line font-medium">
-          <AnimatedText animate="lines">
+          <AnimatedText animate="lines" scrub>
             Ditch the gridlock and embrace the open road. Run, donate,
             <br /> or bring the vibe as we create pathways for a healthier, more
             <br /> connected community, one step at a time.

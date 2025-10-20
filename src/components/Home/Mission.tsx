@@ -5,7 +5,7 @@ const Mission = () => {
   return (
     <section className="bg-[var(--Bg4)] sm:px-5 sm:py-5 py-5 px-2 sm:min-h-[500px] min-h-[400px]  flex flex-col items-start justify-between">
       <h4 className="Heading4 text-[var(--Accent3)]">
-        <AnimatedText animate="lines">
+        <AnimatedText animate="lines" scrub>
           Our mission is to improve suburban quality of life by
           <br className="!sm:hidden !block" />
           reducing car dependency and promoting active
