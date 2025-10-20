@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+@font-face {
+  font-family: "Righteous";
+  src: url("./assets/fonts/Righteous-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer utilities {
+  .Heading1 {
+    @apply xl:text-9xl lg:text-8xl md:text-[75px] text-[32px];
+  }
+  .Heading2 {
+    @apply lg:text-[120px] md:text-[64px] text-[50px];
+  }
+  .Heading3 {
+    @apply lg:text-[100px] md:text-[80px] text-[50px];
+  }
+  .Heading4 {
+    @apply font-semibold xl:text-5xl lg:text-4xl md:text-[30px] text-2xl font-sans;
+  }
+  .Heading5 {
+    @apply font-semibold lg:text-[32px] md:text-[27px] text-[22px]  font-mono;
+  }
+  .Paragraph1 {
+    @apply text-[12px] sm:text-[14px];
+  }
+  .Paragraph2 {
+    @apply text-lg text-[var(--On-accent3)] font-mono font-medium;
+  }
+  .Caption {
+    @apply text-sm text-[var(--On-accent1)] font-mono;
+  }
+  .LinkMenu {
+    @apply text-[var(--On-accent1)] md:text-[26px] text-[22px];
+  }
+  .Link {
+    @apply font-medium text-base;
+  }
+}
+
+:root {
+  /* BackGround */
+  --Bg1: #000000;
+  --Bg2: #202020;
+  --Bg3: #404040;
+  --Bg4: #95ff8d;
+  --Bg5: #1d1d1de6;
+  /* Accent */
+  --Accent1: #ffffff;
+  --Accent2: #aaaaaa;
+  --Accent3: #202020;
+  /* Text */
+  --P: #999999;
+  --On-accent1: #ffffff;
+  --On-accent2: #000000;
+  --On-accent3: #404040;
+  /* Button */
+  --Secondary: #2b2b2b;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Righteous", sans-serif;
+}
+
+.span-animate {
+  will-change: transform, opacity;
+}
