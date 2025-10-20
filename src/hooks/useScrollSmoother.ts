@@ -11,7 +11,7 @@ export const useScrollSmoother = () => {
 
     smoother.current = ScrollSmoother.create({
       smooth: 3,
-      smoothTouch: 0.5,
+      smoothTouch: 1,
       effects: true,
       wrapper: "#smooth-wrapper",
       content: "#smooth-content",
