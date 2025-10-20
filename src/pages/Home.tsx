@@ -1,6 +1,6 @@
 import Hero from "../components/Home/Hero";
 import MissionStatement from "../components/Home/Statement";
-import Services from "../components/Home/Services";
+// import Services from "../components/Home/Services";
 import Mission from "../components/Home/Mission";
 import MainLayout from "../components/layout/MainLayout";
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
     <MainLayout>
       <Hero />
       <MissionStatement />
-      <Services />
+      {/* <Services /> */}
       <Mission />
     </MainLayout>
   );
