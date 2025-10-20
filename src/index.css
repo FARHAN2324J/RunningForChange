@@ -74,6 +74,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: "Righteous", sans-serif;
   min-height: 100vh;
+  background-color: red;
 }
 
 .span-animate {
