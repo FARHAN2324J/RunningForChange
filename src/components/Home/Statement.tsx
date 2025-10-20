@@ -1,19 +1,19 @@
 import strideTogether from "../../assets/images/stride together.webp";
 import { AnimatedText } from "../common/AnimatedText";
-// import { Typography } from "../Typography/Typography";
 import Button from "../ui/Button";
 
 const Statement = () => {
   return (
-    <section className="relative xl:min-h-[850px] lg:min-h-[800px] min-h-[500px] flex items-center justify-center bg-cover bg-center bg-no-repeat ">
-      <img
-        src={strideTogether}
-        alt="Hero background"
-        className="absolute inset-0 w-full h-full object-cover -z-10"
-        loading="lazy"
-        decoding="async"
-      />
-      <article className="relative bg-[var(--Bg5)]  px-5 py-8 flex flex-col items-center justify-center gap-3 w-full">
+    <section
+      style={{
+        backgroundImage: `url(${strideTogether})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+      className="relative xl:min-h-[850px] lg:min-h-[800px] min-h-[500px] flex items-center justify-center"
+    >
+      <article className="relative bg-[var(--Bg5)] px-5 py-8 flex flex-col items-center justify-center gap-3 w-full">
         <h1 className="Heading1 text-[var(--On-accent1)] text-center leading-none tracking-[-0.04em]">
           <AnimatedText>
             Stride

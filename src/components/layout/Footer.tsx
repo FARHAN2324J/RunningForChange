@@ -3,16 +3,16 @@ import { AnimatedText } from "../common/AnimatedText";
 
 const Footer = () => {
   return (
-    <footer className="min-h-[700px] relative" aria-label="Site Footer">
-      <img
-        src={footer}
-        width={500}
-        height={500}
-        alt="walking"
-        loading="lazy"
-        decoding="async"
-        className="w-full h-full absolute object-cover -z-10"
-      />
+    <footer
+      style={{
+        backgroundImage: `url(${footer})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+      className="min-h-[700px] relative"
+       aria-label="Site Footer"
+    >
       <address className="absolute inset-0 px-5 w-full h-full py-8 flex flex-col justify-between not-italic">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 sm:gap-0 gap-5">
           <div className="flex flex-col gap-4">

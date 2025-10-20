@@ -6,14 +6,15 @@ const Services = () => {
   return (
     <section className="grid sm:grid-cols-2 grid-cols-1 min-h-[800px] ">
       <MaskedReveal>
-        <article className="relative flex flex-col items-center justify-center gap-8 lg:min-h-[800px] md:min-h-[800px] min-h-[400px]">
-          <img
-            src={left}
-            alt="30k raised"
-            className="object-cover w-full h-full absolute z-[-10] top-0 left-0"
-            loading="lazy"
-            decoding="async"
-          />
+        <article
+          style={{
+            backgroundImage: `url(${left})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+          className="relative flex flex-col items-center justify-center gap-8 lg:min-h-[800px] md:min-h-[800px] min-h-[400px]"
+        >
           <div className="flex flex-col items-center gap-8">
             <div className="flex flex-col">
               <h2 className="Heading2 sm:whitespace-pre text-[var(--On-accent1)] text-center leading-none tracking-tight">
