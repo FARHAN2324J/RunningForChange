@@ -64,7 +64,7 @@ export function AnimatedText({
         });
       };
     },
-    { scope: textRef, dependencies: [animate, scrub] }
+    { scope: textRef, dependencies: [animate, scrub, children] }
   );
 
   return (
