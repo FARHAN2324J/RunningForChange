@@ -15,7 +15,7 @@ const Hero = () => {
       className="flex items-center justify-center"
     >
       <h1 className="Heading2 text-[var(--On-accent1)]">
-        <AnimatedText>May 12, 2025</AnimatedText>
+        <AnimatedText delay={0.3}>May 12, 2025</AnimatedText>
       </h1>
     </header>
   );

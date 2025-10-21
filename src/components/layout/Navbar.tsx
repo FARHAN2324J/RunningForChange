@@ -10,11 +10,11 @@ const Navbar = () => {
       <ul className="flex justify-between">
         <Link to="/">
           <li className="LinkMenu">
-            <AnimatedText>Home</AnimatedText>
+            <AnimatedText delay={0.1}>Home</AnimatedText>
           </li>
         </Link>
         <li className="LinkMenu leading-6">
-          <AnimatedText>
+          <AnimatedText delay={0.3}>
             Running
             <br /> for
             <br /> Change
@@ -23,12 +23,12 @@ const Navbar = () => {
         <li className="flex flex-col gap-1 leading-6 items-end">
           <Link to="/about">
             <span className="LinkMenu">
-              <AnimatedText>About Us</AnimatedText>
+              <AnimatedText delay={0.8}>About Us</AnimatedText>
             </span>
           </Link>
           <Link to="/event">
             <span className="LinkMenu">
-              <AnimatedText>Events</AnimatedText>
+              <AnimatedText delay={0.8}>Events</AnimatedText>
             </span>
           </Link>
         </li>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import AboutImg from "../../assets/images/About.webp";
 import { AnimatedText } from "../common/AnimatedText";
 import Button from "../ui/Button";
@@ -55,29 +56,31 @@ const Hero = () => {
             </article>
           ))}
         </div>
-        <Button className="bg-[var(--Bg3)] flex items-center gap-1 hover:bg-[var(--Bg2)]">
-          <a
-            href=""
-            className="Link text-[var(--Bg4)] font-sans underline underline-offset-2"
-          >
-            REGISTER
-          </a>
-          <svg
-            width="25px"
-            height="25px"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7 17L17 7M17 7H8M17 7V16"
-              stroke="#95ff8d"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </Button>
+        <Link to="/event">
+          <Button className="bg-[var(--Bg3)] flex items-center gap-1 hover:bg-[var(--Bg2)]">
+            <a
+              href=""
+              className="Link text-[var(--Bg4)] font-sans underline underline-offset-2"
+            >
+              REGISTER
+            </a>
+            <svg
+              width="25px"
+              height="25px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 17L17 7M17 7H8M17 7V16"
+                stroke="#95ff8d"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </Button>
+        </Link>
       </section>
     </header>
   );

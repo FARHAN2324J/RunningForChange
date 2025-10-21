@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import left from "../../assets/images/left.webp";
 import MaskedReveal from "../common/MaskedReveal";
 import Button from "../ui/Button";
@@ -26,7 +27,9 @@ const Services = () => {
               </p>
             </div>
             <Button className="hover:text-[var(--Bg1)] text-[var(--Bg3)] bg-[var(--Bg4)]">
-              <span className="font-medium font-sans">ABOUT US</span>
+              <Link to="/about">
+                <span className="font-medium font-sans">ABOUT US</span>
+              </Link>
             </Button>
           </div>
         </article>

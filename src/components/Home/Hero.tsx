@@ -1,5 +1,6 @@
 import Button from "../ui/Button";
 import heroImg from "../../assets/images/hero.webp";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -29,7 +30,9 @@ const Hero = () => {
         </div>
       </div>
       <Button className="hover:text-[var(--Bg1)] text-[var(--Bg3)] bg-[var(--Bg4)]">
-        <span className="font-medium font-sans">REGISTER</span>
+        <Link to="/event">
+          <span className="font-medium font-sans">REGISTER</span>
+        </Link>
       </Button>
     </header>
   );

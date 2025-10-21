@@ -2,7 +2,10 @@ import { AnimatedText } from "../common/AnimatedText";
 
 const Footer = () => {
   return (
-    <footer className="min-h-[700px] relative bg-[var(--Bg4)]" aria-label="Site Footer">
+    <footer
+      className="min-h-[700px] relative bg-[var(--Bg4)]"
+      aria-label="Site Footer"
+    >
       <address className="absolute inset-0 px-5 w-full h-full py-8 flex flex-col justify-between not-italic">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 sm:gap-0 gap-5">
           <div className="flex flex-col gap-4">
@@ -11,22 +14,24 @@ const Footer = () => {
                 <AnimatedText>Email</AnimatedText>
               </span>
               <a href="" className="CaptionFooter underline">
-                <AnimatedText animate="lines">hello@figma.com</AnimatedText>
+                <AnimatedText delay={0.2} animate="lines">
+                  hello@figma.com
+                </AnimatedText>
               </a>
             </div>
             <div className="flex flex-col gap-2">
               <span className="CaptionFooter">
-                Sponsorship
+                <AnimatedText delay={0.4}>Sponsorship</AnimatedText>
               </span>
               <a href="" className="CaptionFooter underline">
-                <AnimatedText animate="lines">hello@figma.com</AnimatedText>
+                <AnimatedText delay={0.6} animate="lines">hello@figma.com</AnimatedText>
               </a>
             </div>
           </div>
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
               <span className="CaptionFooter">
-                <AnimatedText>Socials</AnimatedText>
+                <AnimatedText delay={0.2}>Socials</AnimatedText>
               </span>
               <div className="flex items-center gap-2">
                 <svg
@@ -97,10 +102,10 @@ const Footer = () => {
             </div>
             <div className="flex flex-col gap-2">
               <span className="CaptionFooter">
-                <AnimatedText>New Fundraiser</AnimatedText>
+                <AnimatedText delay={0.4}>New Fundraiser</AnimatedText>
               </span>
               <p className="CaptionFooter">
-                <AnimatedText animate="lines">
+                <AnimatedText delay={0.6} animate="lines">
                   Running for Change is a 501(c)(3) non-profit organization.
                   Contributions are tax-deductible to the extent permitted by
                   law.

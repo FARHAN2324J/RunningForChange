@@ -11,6 +11,7 @@ interface AnimatedTextProps {
   className?: string;
   animate?: "chars" | "lines";
   scrub?: boolean;
+  delay?: number;
 }
 
 export function AnimatedText({
@@ -18,6 +19,7 @@ export function AnimatedText({
   className = "",
   animate = "chars",
   scrub = false,
+  delay = 0,
 }: AnimatedTextProps) {
   const textRef = useRef<HTMLSpanElement>(null);
 
@@ -33,6 +35,7 @@ export function AnimatedText({
           opacity: 0,
           stagger: 0.05,
           duration: 0.5,
+          delay,
           ease: "circ",
           scrollTrigger: {
             trigger: textRef.current,
@@ -49,6 +52,7 @@ export function AnimatedText({
           yPercent: 100,
           opacity: 0,
           stagger: 0.1,
+          delay,
           ease: "expo.out",
           scrollTrigger: {
             trigger: textRef.current,
@@ -66,7 +70,7 @@ export function AnimatedText({
         });
       };
     },
-    { scope: textRef, dependencies: [animate, scrub, children] }
+    { scope: textRef, dependencies: [animate, scrub, delay, children] }
   );
 
   return (
