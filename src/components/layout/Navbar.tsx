@@ -31,9 +31,11 @@ const Navbar = () => {
               </span>
             </Link>
           )}
-          <span className="LinkMenu">
-            <AnimatedText>Events</AnimatedText>
-          </span>
+          <Link to="/event">
+            <span className="LinkMenu">
+              <AnimatedText>Events</AnimatedText>
+            </span>
+          </Link>
         </li>
       </ul>
     </nav>
