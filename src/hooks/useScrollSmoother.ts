@@ -1,31 +1,46 @@
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollSmoother } from "gsap/ScrollSmoother";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { useEffect, useRef } from "react";
+// import { gsap } from "gsap";
+// import { ScrollSmoother } from "gsap/ScrollSmoother";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export const useScrollSmoother = () => {
-  const smoother = useRef<ScrollSmoother | null>(null);
+// export const useScrollSmoother = () => {
+//   const smoother = useRef<ScrollSmoother | null>(null);
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+//   useEffect(() => {
+//     if (typeof window === "undefined") return; // SSR safe
 
-    smoother.current = ScrollSmoother.create({
-      smooth: 3,
-      // smoothTouch: 3,
-      effects: true,
-      wrapper: "#smooth-wrapper",
-      content: "#smooth-content",
-      ignoreMobileResize: true,
-    });
+//     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-    // Cleanup
-    return () => {
-      if (smoother.current) {
-        smoother.current.kill();
-      }
-    };
-  }, []);
+//     // اگر قبلاً smoother وجود داشت، ابتدا آن را kill می‌کنیم
+//     if (smoother.current) {
+//       smoother.current.kill();
+//       ScrollTrigger.getAll().forEach((st) => st.kill());
+//     }
 
-  return smoother;
-};
+//     smoother.current = ScrollSmoother.create({
+//       smooth: 1.5, // سرعت اسموتر رو می تونید تغییر بدید
+//       effects: true,
+//       wrapper: "#smooth-wrapper",
+//       content: "#smooth-content",
+//       ignoreMobileResize: true,
+//     });
 
+//     // وقتی کامپوننت unmount شد
+//     return () => {
+//       if (smoother.current) {
+//         smoother.current.kill();
+//         ScrollTrigger.getAll().forEach((st) => st.kill());
+//       }
+//     };
+//   }, []);
+
+//   // هر بار که smoother آماده شد، layout رو refresh میکنیم
+//   useEffect(() => {
+//     if (smoother.current) {
+//       ScrollTrigger.refresh();
+//       smoother.current?.refresh();
+//     }
+//   });
+
+//   return smoother;
+// };
