@@ -1,51 +1,43 @@
-import footer from "../../assets/images/footer.webp";
 import { AnimatedText } from "../common/AnimatedText";
 
 const Footer = () => {
   return (
-    <footer
-      style={{
-        backgroundImage: `url(${footer})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-      className="min-h-[700px] relative"
-       aria-label="Site Footer"
-    >
+    <footer className="min-h-[700px] relative bg-[var(--Bg4)]" aria-label="Site Footer">
       <address className="absolute inset-0 px-5 w-full h-full py-8 flex flex-col justify-between not-italic">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 sm:gap-0 gap-5">
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
-              <span className="Caption">
+              <span className="CaptionFooter">
                 <AnimatedText>Email</AnimatedText>
               </span>
-              <a href="" className="Caption underline">
+              <a href="" className="CaptionFooter underline">
                 <AnimatedText animate="lines">hello@figma.com</AnimatedText>
               </a>
             </div>
             <div className="flex flex-col gap-2">
-              <span className="Caption">Sponsorship</span>
-              <a href="" className="Caption underline">
+              <span className="CaptionFooter">
+                Sponsorship
+              </span>
+              <a href="" className="CaptionFooter underline">
                 <AnimatedText animate="lines">hello@figma.com</AnimatedText>
               </a>
             </div>
           </div>
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
-              <span className="Caption">
+              <span className="CaptionFooter">
                 <AnimatedText>Socials</AnimatedText>
               </span>
               <div className="flex items-center gap-2">
                 <svg
-                  fill="#00000"
+                  fill="#95ff8d"
                   version="1.1"
                   id="Layer_1"
                   xmlns="http://www.w3.org/2000/svg"
                   width="30px"
                   height="30px"
                   viewBox="0 0 169.063 169.063"
-                  className="bg-white p-1 rounded-sm"
+                  className="bg-[#404040] p-1 rounded-sm"
                 >
                   <g>
                     <path
@@ -72,7 +64,7 @@ const Footer = () => {
                   viewBox="-5 0 20 20"
                   version="1.1"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="bg-white p-1 rounded-sm"
+                  className="bg-[#404040] p-1 rounded-sm"
                 >
                   <title>facebook [#176]</title>
                   <desc>Created with Sketch.</desc>
@@ -87,7 +79,7 @@ const Footer = () => {
                     <g
                       id="Dribbble-Light-Preview"
                       transform="translate(-385.000000, -7399.000000)"
-                      fill="#000000"
+                      fill="#95ff8d"
                     >
                       <g
                         id="icons"
@@ -104,10 +96,10 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col gap-2">
-              <span className="Caption">
+              <span className="CaptionFooter">
                 <AnimatedText>New Fundraiser</AnimatedText>
               </span>
-              <p className="Caption">
+              <p className="CaptionFooter">
                 <AnimatedText animate="lines">
                   Running for Change is a 501(c)(3) non-profit organization.
                   Contributions are tax-deductible to the extent permitted by
@@ -117,7 +109,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <p className="Heading1 text-[var(--Accent1)]">Running For Change</p>
+        <p className="Heading1 text-[var(--On-accent2)]">Running For Change</p>
       </address>
     </footer>
   );

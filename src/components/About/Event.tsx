@@ -4,13 +4,13 @@ import Button from "../ui/Button";
 const Event = () => {
   return (
     <MaskedReveal clipTo="inset(0% 0% 0% 100%)">
-      <section className="bg-[var(--Bg4)] p-5 flex flex-col justify-center items-center gap-8 min-h-[600px]">
-        <div className="flex flex-col items-center gap-1 md:w-2xl  w-[320px]">
-          <h2 className="Heading3 text-[var(--On-accent2)] text-center sm:leading-23 leading-11">
+      <section className="bg-[var(--Bg2)] p-5 flex flex-col justify-center items-center gap-8 min-h-[600px]">
+        <div className="flex flex-col items-center gap-1 md:w-2xl w-[320px]">
+          <h2 className="Heading3 text-[var(--On-accent1)] text-center sm:leading-23 leading-11">
             Upcoming
             <br className="lg:block md:hidden block" /> Event
           </h2>
-          <p className="Paragraph2 text-center text-pretty !font-sans sm:leading-6 leading-5">
+          <p className="Paragraph2 text-center text-pretty !font-sans sm:leading-6 leading-5 text-[var(--Accent2)]">
             Ditch the gridlock and embrace the open road. Run, donate, or bring
             the vibe on May 12, 2025 starting at the Green Bay Trail.
           </p>

@@ -33,7 +33,7 @@ const Hero = () => {
       />
       <section className="bg-[var(--Bg1)] px-5 lg:py-8 py-5 min-h-[800px] flex flex-col justify-between items-start">
         <h1 className="Heading4 text-[var(--On-accent1)] ">
-          <AnimatedText animate="lines">
+          <AnimatedText animate="lines" scrub>
             Our mission is to improve suburban quality of life by reducing car
             dependency and promoting active transportation.
           </AnimatedText>

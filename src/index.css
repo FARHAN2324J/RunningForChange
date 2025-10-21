@@ -29,10 +29,13 @@
     @apply text-[12px] sm:text-[14px];
   }
   .Paragraph2 {
-    @apply text-lg text-[var(--On-accent3)] font-mono font-medium;
+    @apply text-lg  font-mono font-medium;
   }
   .Caption {
     @apply text-sm text-[var(--On-accent1)] font-mono;
+  }
+  .CaptionFooter {
+    @apply text-sm text-[var(--On-accent2)] font-mono;
   }
   .LinkMenu {
     @apply text-[var(--On-accent1)] md:text-[26px] text-[22px];

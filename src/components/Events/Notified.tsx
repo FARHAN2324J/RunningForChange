@@ -50,7 +50,7 @@ const Notified = () => {
           {items.map((i) => (
             <article key={i.id}>
               <h2 className="Heading5 text-[var(--On-accent1)] font-sans">
-                <AnimatedText scrub>{i.title}</AnimatedText>
+                <AnimatedText>{i.title}</AnimatedText>
               </h2>
 
               <div className="flex flex-col gap-1">
@@ -60,7 +60,7 @@ const Notified = () => {
                       •
                     </span>
                     <p className="Paragraph1 text-[var(--On-accent1)] font-medium pt-1 font-sans">
-                      <AnimatedText animate="lines" scrub>{i.content}</AnimatedText>
+                      <AnimatedText animate="lines">{i.content}</AnimatedText>
                     </p>
                   </div>
                 )}
