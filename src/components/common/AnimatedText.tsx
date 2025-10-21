@@ -8,12 +8,14 @@ gsap.registerPlugin(SplitText, ScrollTrigger);
 
 interface AnimatedTextProps {
   children: React.ReactNode;
+  className?: string;
   animate?: "chars" | "lines";
   scrub?: boolean;
 }
 
 export function AnimatedText({
   children,
+  className = "",
   animate = "chars",
   scrub = false,
 }: AnimatedTextProps) {
@@ -73,7 +75,7 @@ export function AnimatedText({
       <span
         ref={textRef}
         aria-hidden="true"
-        className="overflow-hidden span-animate"
+        className={`overflow-hidden span-animate ${className}`}
       >
         {children}
       </span>

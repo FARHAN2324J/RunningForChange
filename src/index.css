@@ -23,7 +23,7 @@
     @apply font-semibold xl:text-5xl lg:text-4xl md:text-[30px] text-2xl font-sans;
   }
   .Heading5 {
-    @apply font-semibold lg:text-[32px] md:text-[27px] text-[22px]  font-mono;
+    @apply font-semibold lg:text-[32px] md:text-[27px] text-[22px];
   }
   .Paragraph1 {
     @apply text-[12px] sm:text-[14px];
@@ -84,4 +84,3 @@ body {
 .span-animate {
   will-change: transform, opacity;
 }
-
